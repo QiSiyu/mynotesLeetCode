@@ -1,0 +1,2 @@
+# mynotesLeetCode
+My notes
