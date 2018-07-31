@@ -1,0 +1,15 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        residue = []
+        residue[:] = [target - xx for xx in nums]
+        adder_one = (set(residue).intersection(nums)).pop()
+        if adder_one*2 == target:
+            idx1 = nums.index(adder_one)
+            nums.remove(adder_one)
+            return [idx1, nums.index(adder_one) + 1]
+        return [nums.index(adder_one), nums.index(target - adder_one)]
